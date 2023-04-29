@@ -12,6 +12,6 @@ public class ApiController {
     @GetMapping("/")
     public String hello() throws UnknownHostException {
         InetAddress inetAddress = InetAddress.getLocalHost();
-        return "Hello World! This is a k8s spring boot exam1 IP:" + inetAddress.getHostAddress();
+        return "Hello World! A This is a k8s spring boot exam1 IP:" + inetAddress.getHostAddress();
     }
 }
