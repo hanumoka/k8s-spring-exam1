@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-container
-          image: hanumoka/k8s-spring-exam1:origin-main-cb149b40-20230429092944-9
+          image: hanumoka/k8s-spring-exam1:latest
           ports:
             - containerPort: 8080
       imagePullSecrets:
