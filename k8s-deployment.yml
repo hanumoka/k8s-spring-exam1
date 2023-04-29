@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-spring-exam1
+  template:
+    metadata:
+      labels:
+        app: k8s-spring-exam1
+    spec:
+      containers:
+        - name: spring-container
+          image: hanumoka/k8s-spring-exam1:origin-main-380edd81-20230429043736-7
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: docker-hub
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: spring-service
+spec:
+  selector:
+    app: k8s-spring-exam1
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30080
+  type: NodePort
