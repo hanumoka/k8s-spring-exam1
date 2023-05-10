@@ -17,6 +17,6 @@ public class ApiController {
         // reqeust에서 요청자 ip 추출
         System.out.println("remoteAddr:" + request.getRemoteAddr());
         System.out.println("pid:" + pid + " IP:" + inetAddress.getHostAddress());
-        return "Hello World! G This is a k8s spring boot exam1 IP:" + inetAddress.getHostAddress() + "pid:" + pid;
+        return "Hello World! A This is a k8s spring boot exam1 IP:" + inetAddress.getHostAddress() + "pid:" + pid;
     }
 }
